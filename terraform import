@@ -1,0 +1,23 @@
+1. Existing EC2 in AWS
+          ↓
+2. Write corresponding resource block
+          ↓
+3. terraform import
+          ↓
+4. Terraform starts tracking it
+          ↓
+5. terraform plan
+          ↓
+6. Adjust .tf configuration if needed
+
+################################################################################################################################################################################
+You first define the resource in main.tf:
+=========================================
+
+resource "aws_instance" "server" {
+  # configuration
+}
+
+THEN: 
+====
+terraform import aws_instance.server i-0123456789abcdef
